@@ -2,6 +2,9 @@ nav{
     background-color: rgb(255, 255, 255);
     padding: 3%;
 }
+.red{
+    fill: red;
+}
 .text-white{
     text-decoration-color: white;
 }
