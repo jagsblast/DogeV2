@@ -1,11 +1,9 @@
 <?php
-
-
-
 echo '<!doctype html>';
 echo '<html lang="en">';
 echo '<head>';
 echo '<meta http-equiv="refresh" content="60">';
+echo '<title>WorkTribe DogeView V2</title>';
 //import stylesheets for background and bootstrap cuz i totaly love bootstrap
 echo '<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">';
 echo '<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">';
@@ -77,7 +75,7 @@ foreach ($json_a["servers"] as $key => $value) {
     switch($var){
         case ($var == "ok" && $value["message"] != null):
         // -------------
-        echo '<div class="card text-white bg-success mb-3" style="max-width: 18rem;">';
+        echo '<div class="card text-white bg-warning mb-3" style="max-width: 18rem;">';
         echo '<div class="card-header">' . strtoupper($key) . '</div>';
         echo '<div class="card-body">';
         echo '<h5 class="card-title">' . $value["status"] . '</h5>';
