@@ -2,7 +2,7 @@
 echo '<!doctype html>';
 echo '<html lang="en">';
 echo '<head>';
-echo '<meta http-equiv="refresh" content="60">';
+echo '<meta http-equiv="refresh" content="10">';
 echo '<title>WorkTribe DogeView V2</title>';
 //import stylesheets for background and bootstrap cuz i totaly love bootstrap
 echo '<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">';
