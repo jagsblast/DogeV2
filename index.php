@@ -34,35 +34,52 @@ foreach ($json_a["servers"] as $key => $value) {
     $var = strtolower($value["status"]);
 
     switch($var){
-        case "ok":
-            // echo $key;
-            // echo '<div class="spinner-grow text-success" role="status">';
-            // echo '<span class="sr-only">Loading...</span>';
-            // echo '</div> <br/>';
-            // echo 'Status: ' . $value["status"] . "<br/> <br/>";
-            echo '<div class="card text-white bg-success mb-3" style="max-width: 18rem;">';
-            echo '<div class="card-header">' . $key . '</div>';
-            echo '<div class="card-body">';
-            echo '<h5 class="card-title">' . $value["status"] . '</h5>';
-            echo '</div>';
-            echo '</div>';
-            
-            
-            break;
         case "error":
             echo '<div class="card text-white bg-danger mb-3" style="max-width: 18rem;">';
             echo '<div class="card-header">' . $key. '</div>';
             echo '<div class="card-body">';
             echo '<h5 class="card-title">' . $value["status"] . '</h5>';
-            echo '<p class="card-text">' . $value["message"] . '</p>';
+            echo '<p class="card-text">Error: ' . $value["message"] . '</p>';
             echo '<p class="card-text">Raised: ' . $value["raised"] . '</p>';
             echo '</div>';
             echo '</div>';
         }
 }
+foreach ($json_a["servers"] as $key => $value) {
+    echo "<br/>";
+    $var = strtolower($value["status"]);
+        if ($var == "ok" && $value["message"] != null){
+        // -------------
+        echo '<div class="card text-white bg-success mb-3" style="max-width: 18rem;">';
+        echo '<div class="card-header">' . $key . '</div>';
+        echo '<div class="card-body">';
+        echo '<h5 class="card-title">' . $value["status"] . '</h5>';
+        echo '<p class="card-text">Error: ' . $value["message"] . '</p>';
+        echo '<p class="card-text">Raised: ' . $value["raised"] . '</p>';
+        echo '</div>';
+        echo '</div>';
+    }
+}
+foreach ($json_a["servers"] as $key => $value) {
+    echo "<br/>";
+    $var = strtolower($value["status"]);
+        if ($var == "ok" && $value["message"] == null){
+        // -------------
+        echo '<div class="card text-white bg-success mb-3" style="max-width: 18rem;">';
+        echo '<div class="card-header">' . $key . '</div>';
+        echo '<div class="card-body">';
+        echo '<h5 class="card-title">' . $value["status"] . '</h5>';
+        echo '</div>';
+        echo '</div>';
+    }
+}
+// -------------
 echo '</div>';
 //timestamp
-echo "<br/>";
-echo "timestamp";
-echo "<br/>";
-echo date('d/m/y' . "  	" . 'h:m:s',  $json_a["timestamp"]);
+
+
+echo '<footer id="sticky-footer" class="py-4 bg-dark text-white-50">';
+echo '<div class="container text-center">';
+echo '<small>timestamp' . date('d/m/y' . "  	" . 'h:m:s',  $json_a["timestamp"]) . '</small>';
+echo '</div>';
+echo '</footer>';
