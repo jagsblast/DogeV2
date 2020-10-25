@@ -1,7 +1,7 @@
 {
     "servers": {
       "crm": {
-        "status": "ERROR"
+        "status": "Ok"
       },
       "trackear": {
         "status": "ERROR",
@@ -16,7 +16,7 @@
         "updated": "12:30:45 22/06/2020"
       },
       "craam": {
-        "status": "ERROR"
+        "status": "OK"
       },
       "tracaker": {
         "status": "ERROR",
@@ -43,7 +43,7 @@
         "updated": "12:30:45 22/06/2020"
       },
       "cram": {
-        "status": "ERROR"
+        "status": "ok"
       },
       "tracker": {
         "status": "ERROR",
