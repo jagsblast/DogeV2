@@ -1,7 +1,4 @@
 <?php
-
-
-
 echo '<!doctype html>';
 echo '<html lang="en">';
 echo '<head>';
